@@ -1,0 +1,13 @@
+# Ignore the build directory for all Rust projects
+**/target/
+
+# Ignore Cargo lock files (Optional: keep if these are binaries, ignore if libraries)
+# Cargo.lock
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+*.swp
+
+# Ignore environment variables
+.env
