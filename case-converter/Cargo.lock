@@ -3,5 +3,5 @@
 version = 4
 
 [[package]]
-name = "exercise-1-1"
+name = "case-converter"
 version = "0.1.0"
