@@ -33,8 +33,8 @@ fn main() {
     // UpperCamelCase,
     // snake_case,
     // KebabCase,
-    // ScreamingSnakeCase,
-    // TrainCase,
+    // SCREAMING_SNAKE_CASE,
+    // Train-Case,
 
     match desired_case.trim() {
         "UPPERCASE" => println!("{}", text.to_uppercase()),
