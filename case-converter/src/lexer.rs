@@ -33,16 +33,24 @@ impl<'a> Lexer<'a> {
         if self.current_position >= self.text.len() {
             self.current_character = '\0' // EOF
         } else {
-            self.current_character = self.text.chars()[self.current_position] // TODO: We might want to finish the Rust book first before coming back. 
+            if let Some(char) = self.text.chars().nth(self.current_position) {
+                self.current_character = char;
+            } else {
+                panic!("Failed to get char at next_character")
+            }
         }
     }
 
     // Peek the next character without advancing the position
-    pub fn peek_character(&self) -> char {
-        if self.current_position + 1 >= self.text.len() {
-            '\0' // EOF
-        } else {
-            self.text[self.current_position + 1]
-        }
-    }
+    // pub fn peek_character(&self) -> char {
+    //     if self.current_position + 1 >= self.text.len() {
+    //         '\0' // EOF
+    //     } else {
+    //         if let Some(char) = self.text.chars().nth(self.current_position + 1) {
+    //             char
+    //         } else {
+    //             panic!("Failed to peek.")
+    //         }
+    //     }
+    // }
 }
