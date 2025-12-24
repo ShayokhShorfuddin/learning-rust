@@ -52,6 +52,10 @@ fn main() {
             "{}",
             converter_functions::snake_case::convert_to_snake_case(&text)
         ),
+        "SCREAMING_SNAKE_CASE" => println!(
+            "{}",
+            converter_functions::screaming_snake_case::convert_to_screaming_snake_case(&text)
+        ),
         "kebab-case" => println!(
             "{}",
             converter_functions::kebab_case::convert_to_kebab_case(&text)
