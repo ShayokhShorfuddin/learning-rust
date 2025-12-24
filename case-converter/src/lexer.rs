@@ -1,7 +1,7 @@
 pub struct Lexer<'a> {
     text: &'a str,
     pub current_character: char,
-    current_position: usize,
+    pub current_position: usize,
 }
 
 impl<'a> Lexer<'a> {
@@ -42,15 +42,15 @@ impl<'a> Lexer<'a> {
     }
 
     // Peek the next character without advancing the position
-    // pub fn peek_character(&self) -> char {
-    //     if self.current_position + 1 >= self.text.len() {
-    //         '\0' // EOF
-    //     } else {
-    //         if let Some(char) = self.text.chars().nth(self.current_position + 1) {
-    //             char
-    //         } else {
-    //             panic!("Failed to peek.")
-    //         }
-    //     }
-    // }
+    pub fn peek_character(&self) -> char {
+        if self.current_position + 1 >= self.text.len() {
+            '\0' // EOF
+        } else {
+            if let Some(char) = self.text.chars().nth(self.current_position + 1) {
+                char
+            } else {
+                panic!("Failed to peek.")
+            }
+        }
+    }
 }

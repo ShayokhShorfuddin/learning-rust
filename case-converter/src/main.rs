@@ -27,44 +27,31 @@ fn main() {
     // Trimming the trailing newline (ENTER) character. This gets added to the input string because we press ENTER after typing the input.
     let text = text.trim();
 
-    // UpperCase,
-    // LowerCase,
-    // CamelCase,
+    // UPPERCASE,
+    // lowercase,
+    // camelCase,
     // UpperCamelCase,
-    // SnakeCase,
-    // PascalCase,
+    // snake_case,
     // KebabCase,
     // ScreamingSnakeCase,
     // TrainCase,
 
-    match desired_case.trim().to_lowercase().as_str() {
-        "uppercase" => println!("{}", text.to_uppercase()),
+    match desired_case.trim() {
+        "UPPERCASE" => println!("{}", text.to_uppercase()),
         "lowercase" => println!("{}", text.to_lowercase()),
 
-        "kebabcase" => println!(
+        "camelCase" => println!(
+            "{}",
+            converter_functions::camelcase::convert_to_camel_case(&text)
+        ),
+        "UpperCamelCase" => println!(
+            "{}",
+            converter_functions::uppercamelcase::convert_to_upper_camel_case(&text)
+        ),
+        "kebab-case" => println!(
             "{}",
             converter_functions::kebab_case::convert_to_kebab_case(&text)
         ),
-        // "lowercase" => println!("{}", text.to_lowercase()),
-        // "lowercase" => println!("{}", text.to_lowercase()),
-        // "lowercase" => println!("{}", text.to_lowercase()),
-        // "lowercase" => println!("{}", text.to_lowercase()),
-        // "lowercase" => println!("{}", text.to_lowercase()),
         _ => println!("Unknown case. Sorry."),
     }
 }
-
-// fn to_camelcase(text: String) {
-//     let mut result = "";
-
-//     for char in text.chars() {}
-// }
-
-// fn main() {
-//     let mut lexer = lexer::Lexer::new("Hello".chars().collect());
-
-//     while lexer.current_character != '\0' {
-//         println!("Current character: {}", lexer.current_character);
-//         lexer.next_character();
-//     }
-// }
