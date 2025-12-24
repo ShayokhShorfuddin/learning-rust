@@ -48,6 +48,10 @@ fn main() {
             "{}",
             converter_functions::uppercamelcase::convert_to_upper_camel_case(&text)
         ),
+        "snake_case" => println!(
+            "{}",
+            converter_functions::snake_case::convert_to_snake_case(&text)
+        ),
         "kebab-case" => println!(
             "{}",
             converter_functions::kebab_case::convert_to_kebab_case(&text)
