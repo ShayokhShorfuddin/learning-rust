@@ -42,11 +42,11 @@ fn main() {
 
         "camelCase" => println!(
             "{}",
-            converter_functions::camelcase::convert_to_camel_case(&text)
+            converter_functions::camel_case::convert_to_camel_case(&text)
         ),
         "UpperCamelCase" => println!(
             "{}",
-            converter_functions::uppercamelcase::convert_to_upper_camel_case(&text)
+            converter_functions::upper_camel_case::convert_to_upper_camel_case(&text)
         ),
         "snake_case" => println!(
             "{}",
@@ -59,6 +59,10 @@ fn main() {
         "kebab-case" => println!(
             "{}",
             converter_functions::kebab_case::convert_to_kebab_case(&text)
+        ),
+        "Train-Case" => println!(
+            "{}",
+            converter_functions::train_case::convert_to_train_case(&text)
         ),
         _ => println!("Unknown case. Sorry."),
     }
