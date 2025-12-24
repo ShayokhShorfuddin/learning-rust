@@ -5,8 +5,6 @@ fn main() {
     dbg!(numbers);
 }
 
-// TODO: Make test suits
-
 fn bubble_sort(number: &mut [i32]) {
     // Since we are sorting in place, we take a mutable reference to the array, sort it, and return nothing.
     let mut is_sorted = false;
